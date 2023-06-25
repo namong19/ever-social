@@ -103,6 +103,8 @@ import {
       setIsAIContentDone(false); // disable the generate AI content button
       
       // Send the message to the API and receive its response
+      // https://ever-social.onrender.com
+      // http://localhost:3001/openai/chat
       const { data } = await axios.post(`http://localhost:3001/openai/chat`, {
         message
     });

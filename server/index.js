@@ -70,6 +70,11 @@ app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes); // allow the user to upload their picture
 
+/* To verify the server is running on Heroku */
+app.get('/', (req, res) => {
+    res.send('APP IS RUNNING')
+})
+
 // OPENAI ROUTE
 app.use("/openai", openAIRoutes);
 
