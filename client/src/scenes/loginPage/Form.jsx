@@ -88,6 +88,8 @@ const Form = () => {
     const loggedIn = await loggedInResponse.json();
     onSubmitProps.resetForm();
     if (loggedIn) {
+      const audio = new Audio('../assets/Evernova_Bella.mp3');
+      audio.play();
       dispatch(
         setLogin({
           user: loggedIn.user,
